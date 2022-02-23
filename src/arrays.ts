@@ -127,5 +127,23 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const hasNegatives = values.some((val: number): boolean => val < 0);
+    const negativeAt = values.findIndex((val: number): boolean => val < 0);
+    let sum = 0;
+
+    if (hasNegatives === false) {
+        sum = values.reduce((currTot: number, num: number) => currTot + num, 0);
+        const numCopy = [...values, sum];
+        return numCopy;
+    } else {
+        const anotherCopy = [...values];
+        const secondCopy = [...values];
+        secondCopy.length = negativeAt;
+        sum = secondCopy.reduce(
+            (currTot: number, num: number) => currTot + num,
+            0
+        );
+        anotherCopy.splice(negativeAt + 1, 0, sum);
+        return anotherCopy;
+    }
 }
