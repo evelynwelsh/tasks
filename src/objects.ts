@@ -132,7 +132,8 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
     const newQuestion = {
         ...oldQuestion,
         name: "Copy of " + oldQuestion.name,
-        published: false
+        published: false,
+        id: id
     };
     return newQuestion;
 }
