@@ -90,6 +90,16 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
+    const line1 = "# " + question.name + "\n";
+    const line2 = question.body;
+    const beginning = line1 + line2;
+    if (question.type === "multiple_choice_question") {
+        const newLines = question.options.join("\n- ");
+        const start = "\n- ";
+        const combine = start + newLines;
+        return beginning + combine;
+    }
+    return beginning;
     return "";
 }
 
