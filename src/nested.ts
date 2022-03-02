@@ -179,7 +179,12 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    return questions.map(
+        (quest: Question): Question => ({
+            ...quest,
+            name: quest.id === targetId ? newName : quest.name
+        })
+    );
 }
 
 /***
