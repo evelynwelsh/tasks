@@ -1,4 +1,7 @@
+import { queryHelpers } from "@testing-library/react";
+import { ModalDialog } from "react-bootstrap";
 import { idText } from "typescript";
+import { urlToHttpOptions } from "url";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { makeBlankQuestion } from "./objects";
@@ -222,13 +225,42 @@ export function changeQuestionTypeById(
  * Remember, if a function starts getting too complicated, think about how a helper function
  * can make it simpler! Break down complicated tasks into little pieces.
  */
+export function help(
+    quest: Question,
+    targetId: number,
+    targetOptionIndex: number,
+    newOption: string
+): string[] {
+    let final;
+    if (targetOptionIndex !== -1) {
+        const c: string[] = [...quest.options];
+        c.splice(targetOptionIndex, 1, newOption);
+
+        final = {
+            ...quest,
+            options: c
+        };
+    } else {
+        final = { ...quest, options: [...quest.options, newOption] };
+    }
+    return final.options;
+}
 export function editOption(
     questions: Question[],
     targetId: number,
     targetOptionIndex: number,
     newOption: string
 ) {
-    return [];
+    const edited = questions.map(
+        (quest: Question): Question => ({
+            ...quest,
+            options:
+                quest.id === targetId
+                    ? help(quest, targetId, targetOptionIndex, newOption)
+                    : quest.options
+        })
+    );
+    return edited;
 }
 
 /***
