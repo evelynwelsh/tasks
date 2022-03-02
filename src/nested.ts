@@ -4,7 +4,7 @@ import { idText } from "typescript";
 import { urlToHttpOptions } from "url";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -72,7 +72,6 @@ export function sumPoints(questions: Question[]): number {
         (currSum: number, quest: Question) => currSum + quest.points,
         0
     );
-    return 0;
 }
 
 /***
@@ -274,5 +273,11 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const index = questions.findIndex(
+        (q: Question): boolean => q.id === targetId
+    );
+    const newQ = duplicateQuestion(newId, questions[index]);
+    const copy = [...questions];
+    copy.splice(index + 1, 0, newQ);
+    return copy;
 }
