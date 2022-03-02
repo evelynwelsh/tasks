@@ -133,7 +133,9 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    return [];
+    return questions.map(
+        (quest: Question): Question => ({ ...quest, published: true })
+    );
 }
 
 /***
@@ -141,7 +143,13 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    const shortAns = questions.filter(
+        (quest: Question): boolean => quest.type === "short_answer_question"
+    );
+    const multChoice = questions.filter(
+        (quest: Question): boolean => quest.type === "multiple_choice_question"
+    );
+    return shortAns.length === 0 || multChoice.length === 0 ? true : false;
 }
 
 /***
