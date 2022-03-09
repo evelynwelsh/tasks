@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
+//Not sure why this moves the box too
 interface ShoveProps {
     position: number;
     setPosition: (position: number) => void;

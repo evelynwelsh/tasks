@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button, Row, Col } from "react-bootstrap";
-
 const PEOPLE = [
     "Alan Turing",
     "Grace Hopper",
@@ -9,18 +8,16 @@ const PEOPLE = [
     "Barbara Liskov",
     "Margaret Hamilton"
 ];
-
 export function ChooseTeam(): JSX.Element {
     const [allOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
 
-    function chooseMember(newMember: string): void {
+    function chooseMember(newMember: string) {
         if (!team.includes(newMember)) {
             const newMembers = [...team, newMember];
             setTeam(newMembers);
         }
     }
-
     function clearTeam() {
         const cleared: string[] = [];
         setTeam(cleared);
