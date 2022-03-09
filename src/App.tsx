@@ -18,7 +18,7 @@ function App(): JSX.Element {
                 Evelyn Welsh Types Things for CISC275
             </header>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
