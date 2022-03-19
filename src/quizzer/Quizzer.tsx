@@ -44,9 +44,10 @@ export function Quizzer(): JSX.Element {
                     Completed Features
                     <li>sketch</li>
                     <li>Can see question list and info</li>
-                    <li>Can click to view questions and info</li>
+                    <li>Can click to view questions and their info</li>
                     <li>Two types of questions</li>
-                    <li>Can answer questions (partially)</li>
+                    <li>Can answer questions </li>
+                    <li>Can see when answer is correct</li>
                 </ul>
             </div>
         </div>
