@@ -26,7 +26,7 @@ export function QuizView({ quiz }: { quiz: Quiz }): JSX.Element {
             <Button onClick={() => setView(!viewQ)}>
                 {viewQ ? "Hide Questions" : "View Questions"}
             </Button>
-            {viewQ ? <QuestionView quiz={quiz}></QuestionView> : "bye"}
+            {viewQ ? <QuestionView quiz={quiz}></QuestionView> : ""}
         </Container>
     );
 }

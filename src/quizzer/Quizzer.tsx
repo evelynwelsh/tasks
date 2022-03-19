@@ -39,6 +39,16 @@ export function Quizzer(): JSX.Element {
                 deleteQuiz={deleteQuiz}
                 doEdit={doEdit}
             ></QuizList>
+            <div>
+                <ul>
+                    Completed Features
+                    <li>sketch</li>
+                    <li>Can see question list and info</li>
+                    <li>Can click to view questions and info</li>
+                    <li>Two types of questions</li>
+                    <li>Can answer questions (partially)</li>
+                </ul>
+            </div>
         </div>
     );
 }
