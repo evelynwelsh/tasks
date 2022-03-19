@@ -4,10 +4,10 @@ import { Quiz } from "../interfaces/quiz";
 import { QuizView } from "./QuizView";
 
 export function QuizList({
-    quizzes,
-    deleteQuiz,
-    doEdit
-}: {
+    quizzes
+}: // deleteQuiz,
+// doEdit
+{
     quizzes: Quiz[];
     deleteQuiz: (id: string) => void;
     doEdit: (id: string, newQuiz: Quiz) => void;

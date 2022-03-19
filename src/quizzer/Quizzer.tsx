@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Quiz } from "../interfaces/quiz";
 import quizzes from "../data/quizzes.json";
-import questions from "../data/questions.json";
-import { Question, QuestionType } from "../interfaces/question";
-import { QuizView } from "./QuizView";
+// import questions from "../data/questions.json";
+// import { Question, QuestionType } from "../interfaces/question";
+// import { QuizView } from "./QuizView";
 import { QuizList } from "./QuizList";
-import { type } from "@testing-library/user-event/dist/type";
+
 //import { QuizList } from "./QuizList";
 /*const QUIZZES = quizzes.map((quiz): Quiz => [...quiz]);*/
 const QUIZZES = quizzes as Quiz[];
