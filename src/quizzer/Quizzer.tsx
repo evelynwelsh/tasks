@@ -5,10 +5,19 @@ import questions from "../data/questions.json";
 import { Question, QuestionType } from "../interfaces/question";
 import { QuizView } from "./QuizView";
 import { QuizList } from "./QuizList";
+import { type } from "@testing-library/user-event/dist/type";
 //import { QuizList } from "./QuizList";
 /*const QUIZZES = quizzes.map((quiz): Quiz => [...quiz]);*/
-
-export const QUIZZES = { ...quizzes };
+const QUIZZES = quizzes as Quiz[];
+// export const QUIZZES = quizzes.map((quiz: Quiz) => {
+//   return {
+//      ...quiz,
+//     quest: quiz.quest.map(question => {
+//         ...question,
+//         type: question.type as Question
+//     }
+//   }
+// });
 
 export function Quizzer(): JSX.Element {
     const [quiz, setQuizzes] = useState<Quiz[]>(QUIZZES);

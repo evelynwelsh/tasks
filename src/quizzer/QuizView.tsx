@@ -1,10 +1,15 @@
 import { Quiz } from "../interfaces/quiz";
-import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import React, { useState } from "react";
+import { Row, Col, Container, Button } from "react-bootstrap";
+import { QuestionView } from "./QuestionView";
+
 export function QuizView({ quiz }: { quiz: Quiz }): JSX.Element {
+    const [viewQ, setView] = useState<boolean>(false);
+    // function changeView(event: ChangeEvent) {
+    //     setView(event.target.checked);
+    // }
     return (
         <Container>
-            {/* <strong>All Quizzes</strong> */}
             <Row>
                 <Col>
                     <h3>
@@ -16,9 +21,12 @@ export function QuizView({ quiz }: { quiz: Quiz }): JSX.Element {
             <Row>
                 <Col>
                     <p>Total Points Possible: {quiz.totpoints}</p>
-                    <p>Total Points Earned: figure out later</p>
                 </Col>
             </Row>
+            <Button onClick={() => setView(!viewQ)}>
+                {viewQ ? "Hide Questions" : "View Questions"}
+            </Button>
+            {viewQ ? <QuestionView quiz={quiz}></QuestionView> : "bye"}
         </Container>
     );
 }

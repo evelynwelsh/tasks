@@ -24,7 +24,7 @@
                 "published": false
             },
             {
-                "id": 5,
+                "id": 3,
                 "name": "Colors",
                 "body": "Which of these is a color?",
                 "type": "multiple_choice_question",
@@ -34,7 +34,7 @@
                 "published": true
             },
             {
-                "id": 9,
+                "id": 4,
                 "name": "Shapes",
                 "body": "What shape can you make with one line?",
                 "type": "multiple_choice_question",
