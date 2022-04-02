@@ -5,6 +5,7 @@ import { QuestionView } from "./QuestionView";
 
 export function QuizView({ quiz }: { quiz: Quiz }): JSX.Element {
     const [viewQ, setView] = useState<boolean>(false);
+    // const [totPoints, setPoints] = useState<number>(0);
     // function changeView(event: ChangeEvent) {
     //     setView(event.target.checked);
     // }
