@@ -4,6 +4,7 @@ import { Quiz } from "../interfaces/quiz";
 import { QuizView } from "./QuizView";
 
 import { Form } from "react-bootstrap";
+import { EditView } from "./EditView";
 
 type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
 export function QuizList({
@@ -31,7 +32,7 @@ export function QuizList({
             {quizzes.map((quiz: Quiz) => (
                 <div key={quiz.title} className="bg-light border m-2 p-2">
                     {edit ? (
-                        "hi"
+                        <EditView quiz={quiz}></EditView>
                     ) : (
                         <QuizView
                             quiz={quiz}

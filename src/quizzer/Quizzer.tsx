@@ -56,7 +56,16 @@ export function Quizzer(): JSX.Element {
                     <li>Two types of questions</li>
                     <li>Can answer questions </li>
                     <li>Can see when answer is correct</li>
-                    <li>UNFINISHED: I simply cannot get the point totals</li>
+                    <li>Can edit quiz fields</li>
+                    <li>
+                        Can edit MOST question fields (mulitple choice answer
+                        option editing does not function at the current
+                        moment)-some you can edit but they do not change
+                        correctly (like publishing)
+                    </li>
+                    <li>
+                        UNFINISHED: I simply cannot get the point totals to work
+                    </li>
                 </ul>
             </div>
         </div>
