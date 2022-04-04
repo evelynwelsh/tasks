@@ -6,6 +6,68 @@ PASS src/nested.test.ts
 PASS src/arrays.test.ts
 PASS src/objects.test.ts
 PASS src/components/StartAttempt.test.tsx
+PASS src/quizzer/Quizzer.test.tsx (5.113 s)
+  ● Console
+
+    console.error
+      Warning: Each child in a list should have a unique "key" prop.
+      
+      Check the render method of `QuestionView`. See https://reactjs.org/link/warning-keys for more information.
+          at QuestionView (/home/runner/work/tasks/tasks/src/quizzer/QuestionView.tsx:8:32)
+          at div
+          at /home/runner/work/tasks/tasks/node_modules/react-bootstrap/cjs/Container.js:24:3
+          at QuizView (/home/runner/work/tasks/tasks/src/quizzer/QuizView.tsx:6:28)
+          at div
+          at div
+          at /home/runner/work/tasks/tasks/node_modules/react-bootstrap/cjs/Stack.js:23:7
+          at QuizList (/home/runner/work/tasks/tasks/src/quizzer/QuizList.tsx:11:5)
+          at div
+          at Quizzer (/home/runner/work/tasks/tasks/src/quizzer/Quizzer.tsx:32:32)
+
+      12 |     const pointVal = 0;
+      13 |     return (
+    > 14 |         <div>
+         |         ^
+      15 |             {" "}
+      16 |             <p>
+      17 |                 Total Points Earned: {pointVal}/{quiz.totpoints}
+
+      at printWarning (node_modules/react/cjs/react-jsx-dev-runtime.development.js:117:30)
+      at error (node_modules/react/cjs/react-jsx-dev-runtime.development.js:93:5)
+      at validateExplicitKey (node_modules/react/cjs/react-jsx-dev-runtime.development.js:986:5)
+      at validateChildKeys (node_modules/react/cjs/react-jsx-dev-runtime.development.js:1013:11)
+      at jsxWithValidation (node_modules/react/cjs/react-jsx-dev-runtime.development.js:1174:15)
+      at QuestionView (src/quizzer/QuestionView.tsx:14:9)
+      at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:14985:18)
+      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:17811:13)
+
+    console.error
+      Warning: validateDOMNesting(...): <div> cannot appear as a descendant of <p>.
+          at div
+          at /home/runner/work/tasks/tasks/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at p
+          at div
+          at /home/runner/work/tasks/tasks/node_modules/react-bootstrap/cjs/Col.js:72:8
+          at div
+          at /home/runner/work/tasks/tasks/node_modules/react-bootstrap/cjs/Row.js:22:3
+          at div
+          at EditView (/home/runner/work/tasks/tasks/src/quizzer/EditView.tsx:11:28)
+          at div
+          at div
+          at /home/runner/work/tasks/tasks/node_modules/react-bootstrap/cjs/Stack.js:23:7
+          at QuizList (/home/runner/work/tasks/tasks/src/quizzer/QuizList.tsx:11:5)
+          at div
+          at Quizzer (/home/runner/work/tasks/tasks/src/quizzer/Quizzer.tsx:32:32)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10083:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+
 PASS src/components/TwoDice.test.tsx
 PASS src/form-components/MultipleChoiceQuestion.test.tsx
 PASS src/bad-components/ChooseTeam.test.tsx
@@ -21,185 +83,11 @@ PASS src/components/Counter.test.tsx
 PASS src/components/RevealAnswer.test.tsx
 PASS src/bad-components/ColoredBox.test.tsx
 PASS src/bad-components/ShoveBox.test.tsx
-PASS src/quizzer/Quizzer.test.tsx
-FAIL src/App.test.tsx
-  ● renders the course name somewhere
-
-    TestingLibraryElementError: Unable to find an element with the text: /CISC275/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [0mEvelyn Does 275[0m
-          [36m</header>[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mThe Cat Quizzer[0m
-            [36m</h3>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"vstack gap-3"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"col"[39m
-                    [36m>[39m
-                      [36m<h3>[39m
-                        [0mTest Quiz 1[0m
-                        [0m: [0m
-                        [0m4[0m
-                        [0m Questions[0m
-                      [36m</h3>[39m
-                      [36m<p>[39m
-                        [0mThe first test quiz[0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"col"[39m
-                    [36m>[39m
-                      [36m<p>[39m
-                        [0mTotal Points Possible: [0m
-                        [0m5[0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mView Questions[0m
-                  [36m</button>[39m
-                  [0m[0m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"col"[39m
-                    [36m>[39m
-                      [36m<h3>[39m
-                        [0mTest Quiz 2[0m
-                        [0m: [0m
-                        [0m3[0m
-                        [0m Questions[0m
-                      [36m</h3>[39m
-                      [36m<p>[39m
-                        [0mThe second test quiz[0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"col"[39m
-                    [36m>[39m
-                      [36m<p>[39m
-                        [0mTotal Points Possible: [0m
-                        [0m30[0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mView Questions[0m
-                  [36m</button>[39m
-                  [0m[0m
-                [36m</div>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<ul>[39m
-                [0mCompleted Features[0m
-                [36m<li>[39m
-                  [0msketch[0m
-                [36m</li>[39m
-                [36m<li>[39m
-                  [0mCan see question list and info[0m
-                [36m</li>[39m
-                [36m<li>[39m
-                  [0mCan click to view questions and their info[0m
-                [36m</li>[39m
-                [36m<li>[39m
-                  [0mTwo types of questions[0m
-                [36m</li>[39m
-                [36m<li>[39m
-                  [0mCan answer questions [0m
-                [36m</li>[39m
-                [36m<li>[39m
-                  [0mCan see when answer is correct[0m
-                [36m</li>[39m
-              [36m</ul>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<img[39m
-              [33malt[39m=[32m"The sketch of the Quizzer app"[39m
-              [33mheight[39m=[32m"400"[39m
-              [33msrc[39m=[32m"sketch.jpg"[39m
-              [33mwidth[39m=[32m"500"[39m
-            [36m/>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mShow/Hide Past Tasks[0m
-            [36m</button>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-       5 | test("renders the course name somewhere", () => {
-       6 |     render(<App />);
-    >  7 |     const linkElement = screen.getByText(/CISC275/i);
-         |                                ^
-       8 |     expect(linkElement).toBeInTheDocument();
-       9 | });
-      10 |
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:7:32)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
+PASS src/App.test.tsx
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   97.09 |    94.11 |   94.92 |   96.98 |                   
+All files                    |   96.72 |    97.27 |   95.36 |   96.93 |                   
  src                         |   99.41 |      100 |     100 |   99.39 |                   
   App.tsx                    |     100 |      100 |     100 |     100 |                   
   arrays.ts                  |     100 |      100 |     100 |     100 |                   
@@ -228,192 +116,19 @@ All files                    |   97.09 |    94.11 |   94.92 |   96.98 |
   answer.ts                  |       0 |        0 |       0 |       0 |                   
   question.ts                |       0 |        0 |       0 |       0 |                   
   quiz.ts                    |       0 |        0 |       0 |       0 |                   
- src/quizzer                 |   61.11 |     37.5 |   46.15 |   61.11 |                   
+ src/quizzer                 |   81.25 |     87.5 |   73.07 |   82.97 |                   
+  EditView.tsx               |     100 |      100 |     100 |     100 |                   
   InsertSketch.tsx           |     100 |      100 |     100 |     100 |                   
-  QuestionView.tsx           |       0 |        0 |       0 |       0 | 11-15             
+  QuestionEditView.tsx       |   73.68 |       75 |    62.5 |   73.68 | 19-27             
+  QuestionView.tsx           |     100 |      100 |     100 |     100 |                   
   QuizList.tsx               |     100 |      100 |     100 |     100 |                   
-  QuizView.tsx               |   66.66 |       50 |      50 |   66.66 | 26                
-  Quizzer.tsx                |   57.14 |      100 |      25 |   57.14 | 26-31             
+  QuizView.tsx               |     100 |      100 |     100 |     100 |                   
+  Quizzer.tsx                |   57.14 |      100 |      25 |   66.66 | 36-39             
   ShowHideTasks.tsx          |   66.66 |       50 |      50 |   66.66 | 60                
 -----------------------------|---------|----------|---------|---------|-------------------
-Summary of all failing tests
-FAIL src/App.test.tsx
-  ● renders the course name somewhere
 
-    TestingLibraryElementError: Unable to find an element with the text: /CISC275/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [0mEvelyn Does 275[0m
-          [36m</header>[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mThe Cat Quizzer[0m
-            [36m</h3>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"vstack gap-3"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"col"[39m
-                    [36m>[39m
-                      [36m<h3>[39m
-                        [0mTest Quiz 1[0m
-                        [0m: [0m
-                        [0m4[0m
-                        [0m Questions[0m
-                      [36m</h3>[39m
-                      [36m<p>[39m
-                        [0mThe first test quiz[0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"col"[39m
-                    [36m>[39m
-                      [36m<p>[39m
-                        [0mTotal Points Possible: [0m
-                        [0m5[0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mView Questions[0m
-                  [36m</button>[39m
-                  [0m[0m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"container"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"col"[39m
-                    [36m>[39m
-                      [36m<h3>[39m
-                        [0mTest Quiz 2[0m
-                        [0m: [0m
-                        [0m3[0m
-                        [0m Questions[0m
-                      [36m</h3>[39m
-                      [36m<p>[39m
-                        [0mThe second test quiz[0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"row"[39m
-                  [36m>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"col"[39m
-                    [36m>[39m
-                      [36m<p>[39m
-                        [0mTotal Points Possible: [0m
-                        [0m30[0m
-                      [36m</p>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mView Questions[0m
-                  [36m</button>[39m
-                  [0m[0m
-                [36m</div>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<ul>[39m
-                [0mCompleted Features[0m
-                [36m<li>[39m
-                  [0msketch[0m
-                [36m</li>[39m
-                [36m<li>[39m
-                  [0mCan see question list and info[0m
-                [36m</li>[39m
-                [36m<li>[39m
-                  [0mCan click to view questions and their info[0m
-                [36m</li>[39m
-                [36m<li>[39m
-                  [0mTwo types of questions[0m
-                [36m</li>[39m
-                [36m<li>[39m
-                  [0mCan answer questions [0m
-                [36m</li>[39m
-                [36m<li>[39m
-                  [0mCan see when answer is correct[0m
-                [36m</li>[39m
-              [36m</ul>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<img[39m
-              [33malt[39m=[32m"The sketch of the Quizzer app"[39m
-              [33mheight[39m=[32m"400"[39m
-              [33msrc[39m=[32m"sketch.jpg"[39m
-              [33mwidth[39m=[32m"500"[39m
-            [36m/>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mShow/Hide Past Tasks[0m
-            [36m</button>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-       5 | test("renders the course name somewhere", () => {
-       6 |     render(<App />);
-    >  7 |     const linkElement = screen.getByText(/CISC275/i);
-         |                                ^
-       8 |     expect(linkElement).toBeInTheDocument();
-       9 | });
-      10 |
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:7:32)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
-
-Test Suites: 1 failed, 20 passed, 21 total
-Tests:       1 failed, 134 passed, 135 total
+Test Suites: 21 passed, 21 total
+Tests:       153 passed, 153 total
 Snapshots:   0 total
-Time:        11.436 s
+Time:        20.337 s
 Ran all test suites.
