@@ -49,7 +49,7 @@ export function Quizzer(): JSX.Element {
             ></QuizList>
             <div>
                 <ul>
-                    Completed Features
+                    Completed Features (sorry I did not do more I am very tired)
                     <li>sketch</li>
                     <li>Can see question list and info</li>
                     <li>Can click to view questions and their info</li>
@@ -61,7 +61,8 @@ export function Quizzer(): JSX.Element {
                         Can edit MOST question fields (mulitple choice answer
                         option editing does not function at the current
                         moment)-some you can edit but they do not change
-                        correctly (like publishing)
+                        correctly (like publishing) + I forgot to add an edit
+                        for ID
                     </li>
                     <li>
                         UNFINISHED: I simply cannot get the point totals to work
