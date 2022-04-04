@@ -7,7 +7,7 @@ import { ShowHideTasks } from "./quizzer/ShowHideTasks";
 function App(): JSX.Element {
     return (
         <div className="App">
-            <header className="App-header">Evelyn Does 275</header>
+            <header className="App-header">Evelyn Does CISC275</header>
             <Quizzer></Quizzer>
             <InsertSketch></InsertSketch>
             <ShowHideTasks></ShowHideTasks>
